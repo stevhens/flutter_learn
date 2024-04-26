@@ -48,8 +48,10 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #  - assets/salmon_meal.jpg
+  assets:
+  - assets/salmon_meal.jpg
+  - assets/chicken_meal.jpeg
+  - assets/pasta_meal.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
