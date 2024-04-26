@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/mvvm_sample/MyMVVMJokesListApp.dart';
 import 'package:flutter_learn/samples/button_samples.dart';
 import 'package:flutter_learn/samples/column_samples.dart';
 import 'package:flutter_learn/samples/customui_samples.dart';
@@ -18,5 +19,6 @@ void main() {
   // runApp(MyFlexiblevsExpandedApp());
   // runApp(MyFlexiblevsExpandedListApp());
   // runApp(MyFlexiblevsExpandedTextApp());
-  runApp(MyCustomUIApp());
+  // runApp(MyCustomUIApp());
+  runApp(MyMVVMJokesListApp());
 }
