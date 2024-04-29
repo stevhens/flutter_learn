@@ -13,6 +13,7 @@ import 'package:flutter_learn/samples/routing_custom_pageroutebuilder_samples.da
 import 'package:flutter_learn/samples/routing_material_samples.dart';
 import 'package:flutter_learn/samples/routing_ongenerate_samples.dart';
 import 'package:flutter_learn/samples/row_samples.dart';
+import 'package:flutter_learn/samples/stateless_vs_stateful_samples.dart';
 
 void main() {
   // runApp(MyButtonApp());
@@ -23,11 +24,16 @@ void main() {
   // runApp(MyFlexiblevsExpandedApp());
   // runApp(MyFlexiblevsExpandedListApp());
   // runApp(MyFlexiblevsExpandedTextApp());
+
   // runApp(MyCustomUIApp());
+
   // runApp(MyMVVMJokesListApp());
 
   // runApp(MyRoutingMaterialApp());
   // runApp(MyRoutingCupertinoApp());
   // runApp(MyRoutingOnGenerateApp());
-  runApp(MyRoutingCustomPageRouteBuilderApp());
+  // runApp(MyRoutingCustomPageRouteBuilderApp());
+
+  // runApp(MyStatelessSampleApp());
+  runApp(MyStatefulSampleApp());
 }
