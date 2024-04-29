@@ -8,6 +8,10 @@ import 'package:flutter_learn/samples/flexible_samples.dart';
 import 'package:flutter_learn/samples/flexible_vs_expanded_list_samples.dart';
 import 'package:flutter_learn/samples/flexible_vs_expanded_samples.dart';
 import 'package:flutter_learn/samples/flexible_vs_expanded_text_samples.dart';
+import 'package:flutter_learn/samples/routing_cupertino_samples.dart';
+import 'package:flutter_learn/samples/routing_custom_pageroutebuilder_samples.dart';
+import 'package:flutter_learn/samples/routing_material_samples.dart';
+import 'package:flutter_learn/samples/routing_ongenerate_samples.dart';
 import 'package:flutter_learn/samples/row_samples.dart';
 
 void main() {
@@ -20,5 +24,10 @@ void main() {
   // runApp(MyFlexiblevsExpandedListApp());
   // runApp(MyFlexiblevsExpandedTextApp());
   // runApp(MyCustomUIApp());
-  runApp(MyMVVMJokesListApp());
+  // runApp(MyMVVMJokesListApp());
+
+  // runApp(MyRoutingMaterialApp());
+  // runApp(MyRoutingCupertinoApp());
+  // runApp(MyRoutingOnGenerateApp());
+  runApp(MyRoutingCustomPageRouteBuilderApp());
 }
