@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/dio_sample/dio_jsonplaceholder_sample.dart';
+import 'package:flutter_learn/dio_sample/dio_mealsdb_sample.dart';
 import 'package:flutter_learn/mvvm_sample/MyMVVMJokesListApp.dart';
 import 'package:flutter_learn/samples/button_samples.dart';
 import 'package:flutter_learn/samples/column_samples.dart';
@@ -41,6 +43,10 @@ void main() {
   // runApp(MyStatefulSampleApp());
   // runApp(MyStateManagementProviderApp());
 
-  runApp(MyStateManagementBlocApp());
+  // runApp(MyStateManagementBlocApp());
   // runApp(MyStateManagementCubitApp());
+
+  // Dio API fetch print
+  // fetchPosts();
+  fetchMeals();
 }
