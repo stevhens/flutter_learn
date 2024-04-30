@@ -13,6 +13,9 @@ import 'package:flutter_learn/samples/routing_custom_pageroutebuilder_samples.da
 import 'package:flutter_learn/samples/routing_material_samples.dart';
 import 'package:flutter_learn/samples/routing_ongenerate_samples.dart';
 import 'package:flutter_learn/samples/row_samples.dart';
+import 'package:flutter_learn/samples/state_management_bloc_samples.dart';
+import 'package:flutter_learn/samples/state_management_cubit_samples.dart';
+import 'package:flutter_learn/samples/state_management_provider_samples.dart';
 import 'package:flutter_learn/samples/stateless_vs_stateful_samples.dart';
 
 void main() {
@@ -35,5 +38,9 @@ void main() {
   // runApp(MyRoutingCustomPageRouteBuilderApp());
 
   // runApp(MyStatelessSampleApp());
-  runApp(MyStatefulSampleApp());
+  // runApp(MyStatefulSampleApp());
+  // runApp(MyStateManagementProviderApp());
+
+  runApp(MyStateManagementBlocApp());
+  // runApp(MyStateManagementCubitApp());
 }
