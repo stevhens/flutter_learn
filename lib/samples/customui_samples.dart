@@ -15,9 +15,18 @@ class MealItem {
 
 class MyCustomUIApp extends StatelessWidget {
   final List<MealItem> meals = [
-    MealItem(title: "Grilled Salmon", subtitle: "Healthy and Delicious", mealImage: "assets/salmon_meal.jpg"),
-    MealItem(title: "Roast Chicken", subtitle: "Smoky and Tasty", mealImage: "assets/chicken_meal.jpeg"),
-    MealItem(title: "Pasta Carbonara", subtitle: "Creamy and Cheesy", mealImage: "assets/pasta_meal.jpeg")
+    MealItem(
+        title: "Grilled Salmon",
+        subtitle: "Healthy and Delicious",
+        mealImage: "assets/salmon_meal.jpg"),
+    MealItem(
+        title: "Roast Chicken",
+        subtitle: "Smoky and Tasty",
+        mealImage: "assets/chicken_meal.jpeg"),
+    MealItem(
+        title: "Pasta Carbonara",
+        subtitle: "Creamy and Cheesy",
+        mealImage: "assets/pasta_meal.jpeg")
   ];
 
   @override
@@ -30,8 +39,8 @@ class MyCustomUIApp extends StatelessWidget {
         body: ListView.builder(
           itemCount: meals.length,
           itemBuilder: (context, index) {
-            return MyStatefulItemCell(
-              mealImage: meals[index].mealImage,
+            return MyCustomItemCell(
+              image: meals[index].mealImage,
               title: meals[index].title,
               subtitle: meals[index].subtitle,
             );
@@ -42,14 +51,14 @@ class MyCustomUIApp extends StatelessWidget {
   }
 }
 
-class MyStatefulItemCell extends StatelessWidget {
-  final String mealImage;
+class MyCustomItemCell extends StatelessWidget {
+  final String image;
   final String title;
   final String subtitle;
 
-  const MyStatefulItemCell({
+  const MyCustomItemCell({
     Key? key,
-    required this.mealImage,
+    required this.image,
     required this.title,
     required this.subtitle,
   }) : super(key: key);
@@ -58,7 +67,7 @@ class MyStatefulItemCell extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // Do somethin on Tap
+        // Do something on Tap
       },
       child: Container(
         padding: EdgeInsets.all(16),
@@ -69,12 +78,19 @@ class MyStatefulItemCell extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(8),
-              child: Image.asset(
-                mealImage,
-                width: 80,
-                height: 80,
-                fit: BoxFit.cover,
-              ),
+              child: _isValidUrl(image)
+                  ? Image.network(
+                      image,
+                      width: 80,
+                      height: 80,
+                      fit: BoxFit.cover,
+                    )
+                  : Image.asset(
+                      image,
+                      width: 80,
+                      height: 80,
+                      fit: BoxFit.cover,
+                    ),
             ),
             SizedBox(width: 16),
             Expanded(
@@ -98,5 +114,14 @@ class MyStatefulItemCell extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+bool _isValidUrl(String url) {
+  try {
+    final uri = Uri.parse(url);
+    return uri.isAbsolute;
+  } catch (e) {
+    return false;
   }
 }

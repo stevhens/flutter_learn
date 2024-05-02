@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/bloc_dio_sample/home_page.dart';
+import 'package:flutter_learn/bloc_dio_retrofit_sample/ui/screen/home_screen.dart';
+import 'package:flutter_learn/di.dart';
 import 'package:flutter_learn/dio_sample/dio_jsonplaceholder_sample.dart';
 import 'package:flutter_learn/dio_sample/dio_mealsdb_sample.dart';
 import 'package:flutter_learn/mvvm_sample/MyMVVMJokesListApp.dart';
@@ -20,7 +23,7 @@ import 'package:flutter_learn/samples/state_management_cubit_samples.dart';
 import 'package:flutter_learn/samples/state_management_provider_samples.dart';
 import 'package:flutter_learn/samples/stateless_vs_stateful_samples.dart';
 
-void main() {
+void main() async {
   // runApp(MyButtonApp());
   // runApp(MyRowApp());
   // runApp(MyColumnApp());
@@ -48,5 +51,10 @@ void main() {
 
   // Dio API fetch print
   // fetchPosts();
-  fetchMeals();
+  // fetchMeals();
+
+  // Bloc Dio Retrofit DI
+  await setupDi();
+  // runApp(MyDioBlocApp());
+  runApp(MyDioBlocRetrofitApp());
 }
